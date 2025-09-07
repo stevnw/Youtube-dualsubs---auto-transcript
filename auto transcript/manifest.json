@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Transcript Opener",
+  "version": "1.0",
+  "description": "Automatically expands opens transcript on YouTube videos to native lang",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

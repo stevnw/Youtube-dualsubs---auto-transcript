@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube dualsubs",
+  "version": "1.0",
+  "description": "Automatically opens transcript and displays dual subs where avalible.",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
